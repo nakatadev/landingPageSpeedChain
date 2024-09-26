@@ -204,6 +204,7 @@
     color: var(--cor-secundaria);
 }
 .unplug {
+    padding: 1em;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
@@ -327,10 +328,163 @@ footer h2 {
     font-family: 'Inter', sans-serif;
 }
 
-@media (min-width: 769px) {
-    #navbarNav {
-        display: flex !important;
-        justify-content: space-evenly !important;
-        align-items: center !important;
+@media (min-width: 500px) {
+    .logo__nav {
+        width: 150px;
     }
+    .nav-item {
+        margin-right: 2em !important;
+    }
+    .principal h1 {
+        font-size: 22px;
+        width: 300px;
+    }
+    .btn__principal2 {
+        width: 90px;
+        height: 30px;
+    }
+    .img__sobre {
+        width: 200px;
+        height: 160px;
+    }
+    .descricao__formula p {
+        font-size: 16px;
+        text-align: center;
+    }
+    .speed__conteudo h2 {
+        font-size: 20px;
+    }
+    .btn__comprarPrincipal, .btn__verMais {
+        width: 90px;
+    }
+    .sobre__nft img, .publico__alvo img, .unplug img, .objetivos__gerais img, .conteudo__beneficios img {
+        width: 180px;
+        height: auto;
+    }
+    .unplug__conteudo h2 {
+        font-size: 22px;
+    }
+    footer h2 {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .principal {
+        height: 400px;
+        display: flex !important;
+        align-items: flex-start;
+        padding-left: 5em;
+        flex-direction: column !important;
+    }
+    .principal h1 {
+        text-align: left;
+        font-size: 30px;
+        width: 600px;
+    }
+
+    .sobre__formula {
+        display: flex !important;
+        justify-content: center;
+        flex-direction: row;
+        padding: 2em;
+    }
+    .descricao__formula p{
+        text-align: left;
+        width: 300px;
+    }
+    .img__sobre {
+        width: 350px;
+        height: 300px;
+    }
+
+    .SpeedChain {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .speed__conteudo {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+    }
+    .container__comprar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container__comprar img {
+        width: 250px;
+    }
+    .conteudo__speedchain {
+        width: 450px;
+    }
+
+    .sobre__nft {
+        padding: 1em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .sobre__nft p{
+        width: 300px;
+        font-size: 20px;
+    }
+    .sobre__nft img{
+        width: 250px;
+        margin-right: 1em;
+    }
+
+    .publico__alvo2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .publico__alvo2 img {
+        width: 250px;
+    }
+    .conteudo__publicoAlvo {
+        width: 250px;
+    }
+
+    .unplug {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .unplug__conteudo {
+        width: 300px;
+        margin-right: 10em;
+    }
+    .unplug img {
+        width: 300px;
+        margin: 2em;
+    }
+
+    .objetivos__textos {
+        width: 350px;
+    }
+    .objetivos__conteudo img {
+        width: 250px;
+        margin-right: 10em;
+    }
+    
+    .conteudo__beneficios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .conteudo__textos {
+        width: 300px;
+        margin-right: 10em;
+    }
+    .conteudo__beneficios img{
+        width: 300px;
+    }
+
 }
