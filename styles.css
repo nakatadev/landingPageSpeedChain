@@ -252,6 +252,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-top: 1.5em;
 }
 .objetivos__conteudo{
     margin: 1em;
