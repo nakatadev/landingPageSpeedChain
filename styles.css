@@ -158,20 +158,15 @@
 }
 
 .sobre__nft {
-    padding: 1em;
     background-color: var(--cor-principal);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 .sobre__nft img {
-    width: 200px;
+    width: 400px;
 }
 .sobre__nft p {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     color: var(--cor-secundaria);
-    margin: 1em;
 }
 
 .publico__alvo {
@@ -309,7 +304,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     color: var(--cor-secundaria);
@@ -488,3 +482,110 @@ footer h2 {
     }
 
 }
+@media (min-width: 1024px) {
+    .logo__nav {
+        width: 250px; 
+    }
+    .nav-item {
+        margin-right: 4em !important; 
+    }
+    .principal {
+        height: 600px; 
+        padding-left: 12em; 
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .principal h1 {
+        font-size: 50px; 
+        width: 800px;
+        text-align: left;
+    }
+    .btn__principal2 {
+        width: 150px; 
+        height: 50px;
+        font-size: 18px; 
+    }
+
+    .sobre__formula {
+        padding: 6em; 
+    }
+    .descricao__formula p {
+        font-size: 22px; 
+        width: 500px; 
+    }
+    .img__sobre {
+        width: 500px; 
+        height: 400px;
+    }
+
+    .SpeedChain {
+        padding: 4em; 
+    }
+    .speed__conteudo {
+        flex-direction: row;
+        gap: 3em; 
+    }
+    .speed__conteudo h2 {
+        font-size: 32px; 
+    }
+    .speed__imagem {
+        width: 350px; 
+    }
+
+    .container__comprar img {
+        width: 350px; 
+    }
+    .btn__comprarPrincipal, .btn__verMais {
+        width: 140px; 
+        font-size: 20px; 
+    }
+
+    .sobre__nft img {
+        width: 450px; 
+    }
+    .sobre__nft p {
+        font-size: 24px; 
+        width: 500px;
+    }
+
+    .publico__alvo img {
+        width: 350px;
+        height: auto;
+    }
+    .conteudo__publicoAlvo {
+        font-size: 22px;
+    }
+
+    .unplug__conteudo h2 {
+        font-size: 32px;
+    }
+    .unplug img {
+        width: 450px; 
+    }
+
+    .objetivos__gerais img {
+        width: 350px; 
+        height: 350px;
+    }
+    .objetivos__textos {
+        font-size: 20px;
+        width: 500px;
+    }
+
+    .beneficios h2 {
+        font-size: 32px;
+    }
+    .conteudo__beneficios img {
+        width: 400px; 
+        height: auto;
+    }
+    .conteudo__textos {
+        font-size: 20px; 
+        width: 450px;
+    }
+
+    footer h2 {
+        font-size: 20px; 
+    }
+}
+
