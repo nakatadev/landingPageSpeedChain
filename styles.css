@@ -1,31 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 :root {
-    --cor-principal: #010032; 
+    --cor-principal: #010032;
     --cor-secundaria: #ffff;
 }
 
-
-.logo__nav {
-    width: 180px;
+body {
+    height: 100vh;
+    scroll-behavior: smooth !important;
 }
 
-.nav-item {
-    margin-right: 7em !important;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30%, repeat(7, 1fr);
+    grid-template-areas:
+        'principal principal'
+        'sobre sobre'
+        'speedchain speedchain'
+        'sobreNFT sobreNFT'
+        'publico publico'
+        'unplug unplug'
+        'objetivos objetivos'
+        'beneficios beneficios';
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    gap: 2em;
 }
 
+/* Parte imagem inical*/
 .principal {
+    grid-area: principal;
     height: 300px;
+    width: 100%;
     background-image: url('./imagens/Imagem\ fundo\ principal.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
 .principal h1 {
     width: 300px;
     text-align: center;
@@ -34,12 +56,14 @@
     font-weight: 750;
     color: var(--cor-secundaria);
 }
-.principal a{
+
+.principal a {
     color: var(--cor-principal);
     font-size: 13px;
     text-decoration: none;
-
 }
+
+/* Botão da imagem inicial */
 .btn__principal2 {
     background-color: white;
     display: flex;
@@ -52,20 +76,17 @@
     margin-left: 3em;
 }
 
-
+/* primeira section */
 .sobre__formula {
+    grid-area: sobre;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.img__sobre {
-    width: 250px;
-    height: 200px;
-    margin-top: 2em;
-}
+
 .descricao__formula {
     display: flex;
     align-items: center;
@@ -74,41 +95,45 @@
     flex-direction: column;
 }
 
-.descricao__formula p {
-    color: var(--cor-secundaria);
-    font-family: 'Inter', sans-serif;
-}
-
+/* segunda section */
 .SpeedChain {
+    grid-area: speedchain;
     background-color: var(--cor-principal);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .speed__conteudo {
     display: flex;
     padding: 0 2em 0 2em;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
 }
-.speed__titulo{
+
+.speed__titulo {
     margin: 1em;
     color: var(--cor-secundaria);
     font-family: 'Inter', sans-serif;
     font-size: 25px;
 }
+
 .speed__conteudo p {
     color: var(--cor-secundaria);
     font-family: 'Inter', sans-serif;
 }
+
 .speed__conteudo h2 {
     color: #00F0FF;
 }
+
 .speed__imagem {
     width: 200px;
 }
+
+/* Terceira section */
 .container__comprar {
     padding: 1em;
     display: flex;
@@ -116,15 +141,18 @@
     justify-content: space-between;
     flex-direction: column;
 }
+
 .btn__comprar {
     margin-top: 1em;
     display: flex;
     justify-content: space-around;
 }
+
 .btn__comprar a {
     font-size: 20px;
     text-decoration: none;
 }
+
 .btn__comprarPrincipal {
     background-color: #00F0FF !important;
     border-radius: 1em;
@@ -137,9 +165,11 @@
     align-items: center;
     justify-content: center;
 }
+
 .btn__comprarPrincipal a {
     font-size: 15px;
 }
+
 .btn__verMais {
     background-color: var(--cor-secundaria);
     border-radius: 1em;
@@ -153,20 +183,24 @@
     justify-content: center;
 }
 
-.btn__verMais a{
+.btn__verMais a {
     font-size: 15px;
 }
 
 .sobre__nft {
+    grid-area: sobreNFT;
     padding: 1em;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: row-reverse;
 }
+
 .sobre__nft img {
     width: 200px;
 }
+
 .sobre__nft p {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
@@ -174,63 +208,78 @@
     margin: 1em;
 }
 
+/* quinta section */
 .publico__alvo {
+    grid-area: publico;
     background-color: var(--cor-principal);
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    padding: 1em;
 }
-.conteudo__publicoAlvo {
-    margin: 1em;
-    font-family: 'Inter', sans-serif;
-    color: var(--cor-secundaria);
-    
-}
-.publico__alvo img {
-    width: 235px;
-    height: 220px;
-    margin: 1em;
-}
-.publico__alvo2 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+
 .publico__alvo h2 {
+    margin-top: 1em;
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: var(--cor-secundaria);
+    font-weight: 400;
 }
+
+.conteudo__publicoalvo {
+    margin: 1em 2em 2em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 1em;
+}
+
+
+.conteudo__textos__publicoalvo {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--cor-secundaria);
+    margin: 1em;
+}
+
+/* sexta section */
 .unplug {
+    grid-area: unplug;
     padding: 1em;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
 }
-.unplug img {
-    width: 300px;
-}
+
+
 .unplug__conteudo {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 1em;
 }
+
 .unplug__conteudo h2 {
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     color: #00FF0A;
 }
+
 .unplug__conteudo p {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     margin: 1em;
     color: var(--cor-secundaria);
 }
+
 .unplug__conteudo div {
     display: flex;
     align-items: center;
@@ -240,6 +289,7 @@
     height: 30px;
     border-radius: 1em;
 }
+
 .unplug__conteudo div a {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -247,7 +297,9 @@
     color: var(--cor-principal);
 }
 
+/* setima section*/
 .objetivos__gerais {
+    grid-area: objetivos;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
@@ -255,35 +307,42 @@
     flex-direction: column;
     padding-top: 1.5em;
 }
-.objetivos__conteudo{
+
+.objetivos__conteudo {
     margin: 1em;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    width: 100vw;
+
 }
-.objetivos__gerais img {
-    width: 160px;
-    height: 160px;
-}
-.objetivos__gerais h2{
+
+
+.objetivos__gerais h2 {
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     font-weight: 400;
     color: var(--cor-secundaria);
 }
-.objetivos__textos{
+
+.objetivos__textos {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     color: var(--cor-secundaria);
+    margin: 1rem;
 }
 
+/* oitava section */
 .beneficios {
+    grid-area: beneficios;
     background-color: var(--cor-principal);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+
 .beneficios h2 {
     margin-top: 1em;
     font-family: 'Inter', sans-serif;
@@ -291,17 +350,16 @@
     color: var(--cor-secundaria);
     font-weight: 400;
 }
+
 .conteudo__beneficios {
     margin: 1em 2em 2em 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    width: 100vw;
 }
-.conteudo__beneficios img {
-    width: 250px;
-    height: 150px;
-}
+
 
 .conteudo__textos {
     margin-top: 1em;
@@ -315,12 +373,14 @@
     color: var(--cor-secundaria);
 }
 
+/* footer */
 footer {
     display: flex;
     background-color: var(--cor-principal);
     align-items: center;
     justify-content: center;
 }
+
 footer h2 {
     color: var(--cor-secundaria);
     font-weight: 500;
@@ -328,163 +388,258 @@ footer h2 {
     font-family: 'Inter', sans-serif;
 }
 
-@media (min-width: 500px) {
-    .logo__nav {
-        width: 150px;
+/* media mobile */
+@media only screen and (max-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 30%, repeat(7, 1fr);
+        grid-template-areas:
+            'principal'
+            'sobre'
+            'speedchain'
+            'sobreNFT'
+            'publico'
+            'unplug'
+            'objetivos'
+            'beneficios';
+        background-color: var(--cor-principal);
+        color: var(--cor-secundaria);
+        gap: 2em;
     }
-    .nav-item {
-        margin-right: 2em !important;
+    .sobre__formula, .sobre__nft, .conteudo__publicoAlvo, .speed__conteudo, .sobre__nft, .conteudo__publicoalvo, .unplug, .objetivos__conteudo, .conteudo__beneficios {
+        flex-direction: column;
     }
-    .principal h1 {
-        font-size: 22px;
-        width: 300px;
+    .img__sobre, .speed__imagem, .sobre__nft img, .conteudo__publicoalvo, .unplug img, .objetivos__conteudo img, .conteudo__beneficios img{
+        width: 250px;
     }
-    .btn__principal2 {
-        width: 90px;
-        height: 30px;
+    .conteudo__beneficios, .conteudo__publicoalvo{
+        flex-direction: column-reverse;
     }
-    .img__sobre {
-        width: 200px;
-        height: 160px;
+    .conteudo__beneficios p{
+        margin: 0 1rem;
     }
-    .descricao__formula p {
-        font-size: 16px;
-        text-align: center;
-    }
-    .speed__conteudo h2 {
-        font-size: 20px;
-    }
-    .btn__comprarPrincipal, .btn__verMais {
-        width: 90px;
-    }
-    .sobre__nft img, .publico__alvo img, .unplug img, .objetivos__gerais img, .conteudo__beneficios img {
-        width: 180px;
-        height: auto;
-    }
-    .unplug__conteudo h2 {
-        font-size: 22px;
-    }
-    footer h2 {
-        font-size: 14px;
+    .conteudo__publicoalvo{
+        width: 100vw;
     }
 }
 
-
-@media (min-width: 769px) {
-    .principal {
-        height: 400px;
-        display: flex !important;
-        align-items: flex-start;
-        padding-left: 5em;
-        flex-direction: column !important;
+@media (min-width: 1024px) {
+    .logo__nav {
+        width: 100px;
+        height: 50px;
     }
+
+    .nav-item {
+        margin-right: 4em !important;
+    }
+    .img__sobre {
+        width: 450px;
+    }
+    
+    .speed__imagem{
+        width: 300px;
+    }
+    
+    .sobre__nft img{
+        width: 300px;
+    }
+    
+    .conteudo__publicoalvo img {
+        width: 450px;
+    }
+    
+    .unplug img {
+        width: 400px;
+    }
+    
+    .objetivos__conteudo img {
+        width: 400px;
+    }
+    .conteudo__beneficios{
+        justify-content: space-around;
+    }
+    
+    .conteudo__beneficios img {
+        width: 300px;
+    }
+    
+
+    .principal {
+        height: 600px;
+        padding-left: 12em;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
     .principal h1 {
+        font-size: 50px;
+        width: 800px;
         text-align: left;
-        font-size: 30px;
-        width: 600px;
+    }
+
+    .btn__principal2 {
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
     }
 
     .sobre__formula {
-        display: flex !important;
-        justify-content: center;
-        flex-direction: row;
-        padding: 2em;
+        padding: 6em;
     }
-    .descricao__formula p{
-        text-align: left;
-        width: 300px;
-    }
-    .img__sobre {
-        width: 350px;
-        height: 300px;
+
+
+    .descricao__formula p {
+        font-size: 22px;
+        width: 500px;
     }
 
     .SpeedChain {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+        padding: 4em;
     }
-    .speed__conteudo {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
 
+    .speed__conteudo {
+        gap: 3em;
     }
-    .container__comprar {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+
+    .speed__conteudo h2 {
+        font-size: 32px;
     }
+
+
     .container__comprar img {
-        width: 250px;
+        width: 350px;
     }
-    .conteudo__speedchain {
+
+    .btn__comprarPrincipal,.btn__verMais {
+        width: 140px;
+        font-size: 20px;
+    }
+
+    .sobre__nft img {
         width: 450px;
     }
 
-    .sobre__nft {
-        padding: 1em;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    .sobre__nft p{
-        width: 300px;
-        font-size: 20px;
-    }
-    .sobre__nft img{
-        width: 250px;
-        margin-right: 1em;
+    .sobre__nft p {
+        font-size: 24px;
+        width: 500px;
     }
 
-    .publico__alvo2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
+    .conteudo__publicoalvo {
+        font-size: 32px;
+        padding: 0 6em;
     }
-    .publico__alvo2 img {
-        width: 250px;
+    .conteudo__publicoalvo p{
+        font-size: 24px;
+        width: 500px;
+        margin-right: 100px;
     }
-    .conteudo__publicoAlvo {
-        width: 250px;
+    .unplug{
+        padding: 6rem;
     }
 
-    .unplug {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
+    .unplug__conteudo h2 {
+        font-size: 40px;
     }
-    .unplug__conteudo {
-        width: 300px;
-        margin-right: 10em;
+    .unplug__conteudo p {
+        font-size: 25px;
     }
-    .unplug img {
-        width: 300px;
-        margin: 2em;
+
+    .objetivos__conteudo{
+        justify-content: space-around;
+    }
+
+    .objetivos__conteudo p{
+        font-size: 24px;
+        width: 500px;
     }
 
     .objetivos__textos {
-        width: 350px;
-    }
-    .objetivos__conteudo img {
-        width: 250px;
-        margin-right: 10em;
+        font-size: 20px;
     }
     
-    .conteudo__beneficios {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-    }
-    .conteudo__textos {
-        width: 300px;
-        margin-right: 10em;
-    }
-    .conteudo__beneficios img{
-        width: 300px;
+    .beneficios{
+        padding: 5rem;
     }
 
+    .beneficios h2 {
+        font-size: 32px;
+    }
+
+    .conteudo__beneficios p{
+        padding-right: 0;
+    }
+
+    .conteudo__beneficios img{
+        width: 400px;
+        height: 300px;
+    }
+
+    .conteudo__textos {
+        font-size: 20px;
+        width: 450px;
+    }
+    
+    footer h2 {
+        font-size: 20px;
+    }
+    
+    body{
+        scroll-behavior: smooth !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em; 
+    }
+
+    .principal {
+        height: 400px; 
+        background-size: cover;
+    }
+
+    .principal h1 {
+        font-size: 35px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .btn__principal2 {
+        width: 120px; 
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .sobre__formula, .speed__conteudo, .sobre__nft, .conteudo__publicoalvo, .unplug, .objetivos__conteudo, .conteudo__beneficios {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img__sobre, .sobre__nft img, .speed__imagem, .unplug img, .objetivos__conteudo img, .conteudo__beneficios img {
+        width: 400px;
+    }
+
+    .publico__alvo h2, .unplug__conteudo h2, .speed__conteudo h2 {
+        font-size: 22px;
+    }
+
+    .objetivos__gerais h2, .beneficios h2 {
+        font-size: 22px; 
+    }
+
+    .objetivos__textos, .conteudo__textos, .speed__conteudo p, .sobre__nft p, .conteudo__publicoalvo p, .unplug__conteudo p {
+        font-size: 16px;
+    }
+
+    .btn__comprarPrincipal, .btn__verMais {
+        width: 120px; 
+        font-size: 16px;
+    }
+
+    footer h2 {
+        font-size: 14px; 
+    }
 }
